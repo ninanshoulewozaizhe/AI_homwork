@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ab-chess</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
+    <script src="./src/position.js"></script>
+    <script src="./src/board.js"></script>
+    <script src="./src/index.js"></script>
+</head>
+<style type="text/css">
+h1 {
+	text-align: center;
+}
+#chessboard {
+    position: relative;
+	margin: 0 auto;
+	width: 521px;
+	height: 577px;
+	background: url('assets/board.jpg')
+}
+
+#buttonGroup {
+	width: 320px;
+	margin: 20px auto;
+}
+
+button {
+	width: 100px;
+		background-color: #4CAF50; /* Green */
+    border-radius: 3px;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
+<body>
+    <h1>中国象棋</h1>
+    <div id="chessboard"></div>
+    <div id="buttonGroup">
+    	<button id="btn_restart" @click="restart_game">重新开始</button>
+    <button id="btn_retract" @click="retract">悔棋</button>
+    </div>
+</body>
+</html>
